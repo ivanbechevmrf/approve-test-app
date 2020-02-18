@@ -1,7 +1,7 @@
 name: Auto approve
 on:
   pull_request:
-    branches: '[on-call]'
+    branches: 'on-call'
 
 jobs:
   auto-approve:
