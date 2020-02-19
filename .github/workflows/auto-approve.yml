@@ -8,5 +8,8 @@ jobs:
       uses: hmarr/auto-approve-action@v2.0.0
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
-    - name: Print github head_ref
-      run: 'echo github.gead_ref is: ${{ github.event.pull_request.title }}'
+    - name: Print pull request title
+      run: |
+        echo "Pull request's title is: ${PR_TITLE}"
+      env:
+        PR_TITLE: ${{ github.event.pull_request.title }}
