@@ -5,12 +5,14 @@ jobs:
     # if: startsWith( github.event.pull_request.title, '[on-call]' )
     runs-on: ubuntu-latest
     steps:
-    - name: Auto approve
+      - name: Auto approve
       uses: hmarr/auto-approve-action@v2.0.0
+      if: 1 == 2
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
-    - name: Print pull request title
-      run: |
-        echo "Pull request's title is: ${IS_ON_CALL}"
-      env:
-        IS_ON_CALL: ${{ startsWith( github.event.pull_request.title, ''[on-call']' }}
+    # - name: Print pull request title
+    #   run: |
+    #     echo "Pull request's title is: ${PR_TITLE}"
+    #   env:
+
+    #     PR_TITLE: ${{ github.event.pull_request.title }}
