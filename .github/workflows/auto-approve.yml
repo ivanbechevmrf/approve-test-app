@@ -9,4 +9,4 @@ jobs:
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
     - name: Print github head_ref
-      run: 'echo github.gead_ref is: ${{ github.event }}'
+      run: 'echo github.gead_ref is: ${{ github.event.pull_request.title }}'
