@@ -13,4 +13,4 @@ jobs:
       run: |
         echo "Pull request's title is: ${IS_ON_CALL}"
       env:
-        IS_ON_CALL: ${{ startsWith( github.event.pull_request.title, '[on-call]' }}
+        IS_ON_CALL: ${{ startsWith( github.event.pull_request.title, '\\[on-call\\]' }}
