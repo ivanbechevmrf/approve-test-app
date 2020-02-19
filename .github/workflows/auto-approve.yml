@@ -13,4 +13,5 @@ jobs:
     #   run: |
     #     echo "Pull request's title is: ${PR_TITLE}"
     #   env:
+
     #     PR_TITLE: ${{ github.event.pull_request.title }}
