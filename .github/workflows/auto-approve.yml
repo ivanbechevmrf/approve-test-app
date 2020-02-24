@@ -1,14 +1,14 @@
-name: Auto approve
-on: pull_request
-jobs:
-  auto-approve:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Auto approve
-      uses: hmarr/auto-approve-action@v2.0.0
-      if: startsWith( github.event.pull_request.title, '[on-call]' )
-      with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
+# name: Auto approve
+# on: pull_request
+# jobs:
+#   auto-approve:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Auto approve
+#       uses: hmarr/auto-approve-action@v2.0.0
+#       if: startsWith( github.event.pull_request.title, '[on-call]' )
+#       with:
+#         github-token: "${{ secrets.GITHUB_TOKEN }}"
     # - name: Print pull request title
     #   run: |
     #     echo "Pull request's title is: ${PR_TITLE}"
